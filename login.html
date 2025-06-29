@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login page</title>
+</head>
+<body>
+    <div class="container">
+    <h1> Login to learn more </h1>
+
+<form action="#" method="post">
+    <p> <label for="name">Username:</label>
+        <input type="text" name="name" placeholder="Enter username"required>
+    </p>
+
+    <p> <label for="password"> Password:</label>    
+        <input type="password" name="password" id="password" placeholder="Enter password"required>
+    </p>
+
+    <p> <label for="confirm-password">Confirm-password:</label>   
+        <input type="password" name="confirm-password" id="confirm-password" placeholder=" Confirm password"required>
+    </p>
+    <p>  <label for="my-date"> Date of Birth:</label>    
+        <input type="date" name="my-date" id="my-date" placeholder="yyyy/mm/dd"required>
+    </p>
+    <p>
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+    </p>
+    <p>
+        <label for="voting"> Are you above 18? </label>
+        <input type="checkbox" name="vote" id="vote"></p>
+        <br>
+        <button type="submit">submit</button>
+    </form>
+</div>
+<div class="link">
+    <a href="project.html">
+        <button type="submit">Go to Home page</button>
+</div>
+    <script> 
+        const myForm = document.forms[0];
+        const name = myForm.elements['name'];
+        const email = myForm.elements['email'];
+        const password = myForm.elements['password'];
+        const confirmpassword= myForm.elements['confirm-password'];
+        const myDate = myForm.elements['my-date'];
+        myForm.addEventListener('submit',function(event){
+        if(name.value.length<3)
+        {   alert('Name must be at least 3 characters long');
+            event.preventDefault(); }
+
+        if(password.value.length<8)
+        {
+            alert('password must be least 8 characters long');
+            event.preventDefault(); }
+
+        if(password.value!== confirmpassword.value)
+        {
+            alert('password and confirm password must be same ');
+            event.preventDefault(); } })
+    </script>
+     <footer class="footer">
+        <div class="footer-container">
+            <p>&copy;Social Sites</p>
+             <div class="social-icons">
+                <a href="http://www.facebook.com" target="_blank"class="fa fa-facebook"></a>
+                <a href="http://www.instagram.com" target="_blank"class="fa fa-instagram"></a>
+                <a href="http://www.twitter.com" target="_blank"class="fa fa-twitter"></a>
+             </div>
+        </div>
+     </footer>
+
+</body>
+</html>
